@@ -49,7 +49,8 @@ a. From "Modeling" Pane, click the "New Measure" icon.
 <p>&nbsp;</p>
 b. You can copy paste DAX formula below to create Calendar table.
 <p>&nbsp;</p>
-```
+
+```text
 Calendar = 
 VAR AllDates =
     UNION (
