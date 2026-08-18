@@ -11,14 +11,15 @@ Before we begin this tutorial, make sure you have:
 - The Excel file that will be used as the data source throughout this tutorial.
 - Basic familiarity with Power BI, such as navigating the Power BI Desktop interface and using its main features.
 
-1. Download the sample dataset
+### 1. Download the sample dataset
    
 - Go to the data folder
 - Locate the Candidate Data.xlsx file
 - Download the file
 <img width="1110" height="206" alt="image" src="https://github.com/user-attachments/assets/9d73232a-cc9c-47d8-8911-07da8910eb72" />
 
-2. Import the data into Power BI
+
+### 2. Import the data into Power BI
 
 - From "Home", find the "Get Data" and click Excel Workbook
 <img width="445" height="570" alt="image" src="https://github.com/user-attachments/assets/27e187e7-085e-4fd6-8a81-ca896ce71632" />
