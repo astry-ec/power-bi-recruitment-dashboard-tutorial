@@ -43,9 +43,9 @@ d. You will notice the data is loaded in the Data panel, in the right side.
 
 The best practice of data analytics relies on time-based visualization to show the trend over time. To achieve this, we need to create additional Calendar table.
 
-a. From "Modeling" Pane, click the "New Measure" icon.
+a. From "Modeling" Pane, click the "New Table" icon.
 <p>&nbsp;</p>
-<img width="946" height="341" alt="image" src="https://github.com/user-attachments/assets/2d5a9604-8021-4a8d-ab07-a12f73a7cb0e" />
+<img width="953" height="355" alt="image" src="https://github.com/user-attachments/assets/5a12a3bd-084a-4af7-9e98-9f4e9f12700f" />
 <p>&nbsp;</p>
 b. You can copy paste DAX formula below to create Calendar table.
 <p>&nbsp;</p>
@@ -100,9 +100,11 @@ RETURN
     )
 
 ```
-<img width="1543" height="274" alt="image" src="https://github.com/user-attachments/assets/cc1a4d9f-70b9-41c5-b06e-544f07500465" />
-
+<img width="890" height="329" alt="image" src="https://github.com/user-attachments/assets/502be327-82b7-4258-8481-f98c08198341" />
 <p>&nbsp;</p>
+c. You will notice there is one additional table in Data pane
+<p>&nbsp;</p>
+<img width="185" height="394" alt="image" src="https://github.com/user-attachments/assets/5d456c5f-ebce-4ffc-8588-5c363e643cdf" />
 
 
 5. 
