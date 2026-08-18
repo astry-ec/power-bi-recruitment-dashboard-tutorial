@@ -100,6 +100,8 @@ RETURN
     )
 
 ```
+<img width="1543" height="274" alt="image" src="https://github.com/user-attachments/assets/cc1a4d9f-70b9-41c5-b06e-544f07500465" />
+
 <p>&nbsp;</p>
 
 
