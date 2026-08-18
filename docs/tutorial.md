@@ -22,7 +22,7 @@ Before we begin this tutorial, make sure you have:
 ### 2. Import the data into Power BI
 
 a. From "Home", find the "Get Data" and click Excel Workbook
-
+<p>&nbsp;</p>
 <img width="445" height="570" alt="image" src="https://github.com/user-attachments/assets/27e187e7-085e-4fd6-8a81-ca896ce71632" />
 <p>&nbsp;</p>
 b. Find the Candidate Data.xlsx in your local folder
@@ -33,9 +33,76 @@ c. The file will be loaded in Navigator pane as below. We can click the table na
   We don't need to change any data from the source, we just need to click "Load".
 <p>&nbsp;</p>
 <img width="888" height="704" alt="image" src="https://github.com/user-attachments/assets/2a6e9026-3935-4b6b-be56-c97a96a97318" />
+<p>&nbsp;</p>
+d. You will notice the data is loaded in the Data panel, in the right side.
+<p>&nbsp;</p>
+<img width="1920" height="519" alt="image" src="https://github.com/user-attachments/assets/8db7ce4f-99bf-4447-9a19-d7352971d343" />
+<p>&nbsp;</p>
 
-4. Prepare the data
-5. Create relationships
+### 3. Prepare Additional Table
+
+The best practice of data analytics relies on time-based visualization to show the trend over time. To achieve this, we need to create additional Calendar table.
+
+a. From "Modeling" Pane, click the "New Measure" icon.
+<p>&nbsp;</p>
+<img width="946" height="341" alt="image" src="https://github.com/user-attachments/assets/2d5a9604-8021-4a8d-ab07-a12f73a7cb0e" />
+<p>&nbsp;</p>
+b. You can copy paste DAX formula below to create Calendar table.
+<p>&nbsp;</p>
+```text
+Calendar = 
+VAR AllDates =
+    UNION (
+        SELECTCOLUMNS (
+            'Application',
+            "DateValue", 'Application'[ApplicationDate]
+        ),
+        SELECTCOLUMNS (
+            'Job',
+            "DateValue", 'Job'[OpenDate]
+        ),
+        SELECTCOLUMNS (
+            'Job',
+            "DateValue", 'Job'[CloseDate]
+        ),
+        SELECTCOLUMNS (
+            'StatusHistory',
+            "DateValue", 'StatusHistory'[StatusDate]
+        )
+    )
+
+VAR MinDate =
+    MINX (
+        FILTER ( AllDates, NOT ISBLANK ( [DateValue] ) ),
+        [DateValue]
+    )
+
+VAR MaxDate =
+    MAXX (
+        FILTER ( AllDates, NOT ISBLANK ( [DateValue] ) ),
+        [DateValue]
+    )
+
+RETURN
+    ADDCOLUMNS (
+        CALENDAR ( MinDate, MaxDate ),
+        "Year", YEAR ( [Date] ),
+        "Month Number", MONTH ( [Date] ),
+        "Month", FORMAT ( [Date], "MMMM" ),
+        "Month Short", FORMAT ( [Date], "MMM" ),
+        "Year Month", FORMAT ( [Date], "yyyy-MM" ),
+        "Year Month Sort", YEAR ( [Date] ) * 100 + MONTH ( [Date] ),
+        "Quarter", "Q" & FORMAT ( [Date], "Q" ),
+        "Week Number", WEEKNUM ( [Date], 2 ),
+        "Day", DAY ( [Date] ),
+        "Day Name", FORMAT ( [Date], "dddd" )
+    )
+
+```
+<p>&nbsp;</p>
+
+
+5. 
 6. Create your first DAX measures
 7. Build KPI cards
 8. Visualize applicant trends
