@@ -25,7 +25,7 @@ a. From "Home", find the "Get Data" and click Excel Workbook
 
 <img width="445" height="570" alt="image" src="https://github.com/user-attachments/assets/27e187e7-085e-4fd6-8a81-ca896ce71632" />
 
-<br>
+<p>&nbsp;</p>
 
 b. Find the Candidate Data.xlsx in your local folder
 
