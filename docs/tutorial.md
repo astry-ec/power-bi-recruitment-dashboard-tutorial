@@ -1,11 +1,11 @@
 # Build Your First Recruitment Dashboard in Power BI
 
 ## What you will build
-This tutorial shows you step by step how to build Power BI Dashboard with Excel file as the data source. Afterwards, you will also learn how to create DAX measures and calculated columns to get the required KPI data.
-In addition, you will lear how to build some charts using several types of Power BI chart and creating slicer to narrow down the data.
+In this tutorial, we will learn step by step how to build Power BI Dashboard with Excel file as the data source. Afterwards, we will also learn how to create DAX measures and calculated columns to get the required KPI data.
+In addition, we will learn how to build some charts using several types of Power BI chart and creating slicer to narrow down the data.
 
 ## Prerequisites
-Before you begin this tutorial, make sure you have:
+Before we begin this tutorial, make sure you have:
 
 - Power BI Desktop installed on your computer.
 - The Excel file that will be used as the data source throughout this tutorial.
