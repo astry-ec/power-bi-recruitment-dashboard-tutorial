@@ -19,6 +19,12 @@ Before we begin this tutorial, make sure you have:
 <img width="1110" height="206" alt="image" src="https://github.com/user-attachments/assets/9d73232a-cc9c-47d8-8911-07da8910eb72" />
 
 2. Import the data into Power BI
+
+- From "Home", find the "Get Data" and click Excel Workbook
+<img width="445" height="570" alt="image" src="https://github.com/user-attachments/assets/27e187e7-085e-4fd6-8a81-ca896ce71632" />
+
+- Find the
+
 4. Prepare the data
 5. Create relationships
 6. Create your first DAX measures
